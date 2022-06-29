@@ -1,0 +1,43 @@
+<html lang="en">
+
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content=
+            "width=device-width, initial-scale=1.0">
+      <script src=
+  "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+        </script>
+  </head>
+
+  <script>
+      function makePUTrequest() {
+          $.ajax({
+              url: 'https://jsonplaceholder.typicode.com/posts/1',
+              type: 'PUT',
+              success: function (result) {
+                alert("put success");
+              }
+          });
+      }
+
+      function makeDELETErequest() {
+          $.ajax({
+              url: 'https://jsonplaceholder.typicode.com/posts/1',
+              type: 'DELETE',
+              success: function (result) {
+                alert("delete success");
+              }
+          });
+      }
+  </script>
+
+  <body>
+      <button onclick="makePUTrequest()">
+          Click for PUT request
+      </button>
+      <button onclick="makeDELETErequest()">
+          Click for DELETE request
+      </button>
+  </body>
+
+</html>
